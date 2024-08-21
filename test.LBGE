@@ -1,0 +1,87 @@
+VAR a = 10;
+VAR b = 5;
+VAR sum = a + b;
+VAR product = a * b;
+PRINT("Sum: " + sum);
+PRINT("Product: " + product);
+PRINT("");
+
+VAR numbers = [1, 2, 3, 4, 5];
+VAR length = LENGTH(numbers);
+VAR index = INDEX(numbers, 3);
+VAR contains = CONTAINS(numbers, 4);
+VAR newArray = ADD(numbers, 6);
+VAR removedArray = REMOVE(numbers, 2);
+PRINT("Array Length: " + length);
+PRINT("Index of 3: " + index);
+PRINT("Contains 4: " + contains);
+PRINT("Array with 6 added: " + newArray);
+PRINT("Array with 2 removed: " + removedArray);
+PRINT("");
+
+VAR greeting = "Hello, World!";
+VAR upperGreeting = ISUPPER(greeting);
+VAR lowerGreeting = ISLOWER(greeting);
+VAR replacedGreeting = REPLACE(greeting, "World", "Universe");
+VAR splitGreeting = SPLIT(greeting);
+PRINT("Original Greeting: " + greeting);
+PRINT("Uppercase Greeting: " + upperGreeting);
+PRINT("Lowercase Greeting: " + lowerGreeting);
+PRINT("Replaced Greeting: " + replacedGreeting);
+PRINT("Split Greeting: " + splitGreeting);
+PRINT("");
+
+VAR number = 7;
+IF number < 5 {
+    PRINT("Number is less than 5\n");
+}
+ELSE {
+    PRINT("Number is greater than 5 and not 7\n");
+}
+
+VAR counter = 0;
+FOR i (0, 5) {
+    counter = counter + 1;
+    PRINT("Counter value: " + counter);
+}
+
+VAR whileCounter = 10;
+WHILE whileCounter < 20 {
+    whileCounter = whileCounter + 1;
+}
+PRINT("\nWhile loop final counter value: " + whileCounter + "\n");
+
+FUN multiply(x, y) {
+    RETURN x * y;
+}
+
+VAR result = multiply(4, 5);
+PRINT("Multiplication Result: " + result);
+
+VAR num = 10;
+IF num > 5 {
+    IF num < 15 {
+        num = num * 2;
+    } ELSE {
+        num = num / 2;
+    }
+} ELSE {
+    num = num + 10;
+}
+PRINT("Nested Control Structures Result: " + num);
+
+VAR divisor = 0;
+IF divisor == 0 {
+    PRINT("Error: Division by zero!");
+} ELSE {
+    VAR division = 10 / divisor;
+    PRINT("Division Result: " + division);
+}
+VAR complexResult = (10 + 2) * (5 - 3) / 2;
+PRINT("Complex Expression Result: " + complexResult);
+
+PRINT("");
+
+FUN f() {
+    PRINT("Function f called");
+}
