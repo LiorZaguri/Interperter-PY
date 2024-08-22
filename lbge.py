@@ -328,7 +328,7 @@ if __name__ == "__main__":
 
                 code = code.strip()
 
-                if not (code.startswith("PRINT(") or code.startswith("VAR") or code.startswith("FUN") or code.__contains__("=")):
+                if not (code.startswith("PRINT(") or code.startswith("VAR") or code.startswith("FUN") or "=" in code):
                     code = "PRINT(" + code + ");"
 
                 # Tokenize
