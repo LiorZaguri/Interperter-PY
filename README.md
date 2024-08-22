@@ -58,8 +58,6 @@ You can execute the predefined test cases by running the LBGE.py script:
 python lbge.py run_tests
 ```
 
-This script will run a series of predefined test cases to validate the functionality of the interpreter. Each test case includes a description, the code to be executed, and the expected results. The function compares the interpreter's output against the expected results and reports any discrepancies.
-
 #### 2. Run a Script File:
 To execute your script using the LBGE interpreter, follow these steps:
 
@@ -95,7 +93,7 @@ Example usage in the interactive shell:
     >>> /exit
 
 ### Running the Tests
-The run_tests function executes a series of predefined test cases and compares the results of the interpreter against expected values. If all tests pass, a success message will be displayed; otherwise, the function will report any failures.
+This script will run a series of predefined test cases to validate the functionality of the interpreter. Each test case includes a description, the code to be executed, and the expected results. The function compares the interpreter's output against the expected results and reports any discrepancies.
 
 ### Example Test Cases
 
