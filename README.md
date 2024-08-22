@@ -16,7 +16,6 @@ The interpreter can handle a wide range of mathematical, logical, string, and li
         *   [Logical Operations](#logical-operations)
         *   [String Operations](#string-operations)
         *   [List Operations](#list-operations)
-    *   [Test Cases](#test-cases)
 
 ## Installation
 
