@@ -206,8 +206,3 @@ class Interpreter:
                 return eval(name)(*args)
             else:
                 raise RuntimeError(f"Unknown function: {name}")
-
-
-
-
-
