@@ -635,6 +635,16 @@ def REVERSE(text):
         raise ValueError("the input is not string")
 
 
+def GET(collection, index):
+    if isinstance(collection, (list, tuple)) and isinstance(index, numbers.Integral):
+        try:
+            return collection[index]
+        except IndexError:
+            raise ValueError("Index out of range")
+    else:
+        raise ValueError("Unsupported types or mismatched types")
+
+
 """
 Prints the provided text.
 

@@ -12,6 +12,7 @@ VAR index = INDEX(numbers, 3);
 VAR contains = CONTAINS(numbers, 4);
 VAR newArray = ADD(numbers, 6);
 VAR removedArray = REMOVE(numbers, 2);
+PRINT(numbers);
 PRINT("Array Length: " + length);
 PRINT("Index of 3: " + index);
 PRINT("Contains 4: " + contains);

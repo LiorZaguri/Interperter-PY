@@ -2,7 +2,7 @@ from lbge_functions import *
 
 # Functions that allowed to be used in the shell
 Functions = {'ADD', 'SUB', 'MUL', 'DIVIDE', 'FLOOR_DIVIDE', 'POWER', 'SQUARE', 'FACTORIAL', 'ABS', 'MOD', 'SQRT',
-             'MIN', 'MAX', 'ASSIGN', 'EQUAL', 'NOT_EQUAL', 'GREATER', 'GREATER_EQUAL', 'REMOVE', 'APPEND',
+             'MIN', 'MAX', 'ASSIGN', 'EQUAL', 'NOT_EQUAL', 'GREATER', 'GREATER_EQUAL', 'REMOVE', 'APPEND', 'GET',
              'SPLIT', 'REPLACE', 'LENGTH', 'CONTAINS', 'ISUPPER', 'ISLOWER', 'CONCAT', 'REVERSE', 'PRINT', 'INDEX'}
 
 Operators = [
@@ -152,6 +152,8 @@ class Interpreter:
                 return apply_operator(left, right, expr['op'])
             elif expr['type'] == 'array':
                 return [self.evaluate(element) for element in expr['elements']]
+            elif expr['type'] == 'tuple':
+                return tuple([self.evaluate(element) for element in expr['elements']])
             elif expr['type'] == 'function':
                 self.functions[expr['name']] = expr
                 return None

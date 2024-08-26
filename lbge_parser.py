@@ -303,6 +303,12 @@ class Parser:
                 else:
                     return self.consume('ID')
             elif token_type == 'LPAREN':
+                i = 0
+                while self.tokens[self.current + i][0] != 'RPAREN':
+                    if self.tokens[self.current + i][0] == 'COMMA':
+                        expr = self.parse_tuple()
+                        return expr
+                    i = i + 1
                 self.consume('LPAREN')
                 expr = self.parse_expression
                 self.consume('RPAREN')
@@ -347,6 +353,23 @@ class Parser:
                 self.consume('COMMA')
         self.consume('RBRACE')  # Consume ']'
         return {'type': 'array', 'elements': elements}
+
+
+    """
+    Parses an tuple literal, including its elements.
+
+    Returns:
+        dict: A dictionary representing the tuple literal, including its elements.
+    """
+    def parse_tuple(self):
+        self.consume('LPAREN')  # Consume '('
+        elements = []
+        while self.current < len(self.tokens) and self.tokens[self.current][0] != 'RPAREN':
+            elements.append(self.parse_expression)
+            if self.tokens[self.current][0] == 'COMMA':
+                self.consume('COMMA')
+        self.consume('RPAREN')  # Consume ']'
+        return {'type': 'tuple', 'elements': elements}
 
     """
     Parses a function definition, including its name, parameters, and body.
