@@ -1,5 +1,4 @@
 # Custom Python Interpreter
-"LBGE" stand for Lior Bar Gal Elad as the first letters of the names of the developers.
 ## Project Overview
 
 This project was developed as a final project for the "Principles of Programming Languages" course during my Bachelor of Science (B.Sc) studies. It serves as a demonstration of various concepts and techniques learned throughout the course.
