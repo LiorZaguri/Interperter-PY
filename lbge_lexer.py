@@ -1,8 +1,3 @@
-# Lior Zaguri 318181609
-# Gal Ben Haim 209508787
-# Elad Swisa 307860155
-# Bar Rosenzweig 315520700
-
 import re
 
 # Define token patterns
